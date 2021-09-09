@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<header>
+<h1 class="h1">Results Page</h1>
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/show_results.css') }}">
+</header>
+
+<body>
+<p class="box"> <i><b>Here are the results</b><i> </p>
+
+<div class="container">
+  <h3 class="title">Original Image</h3>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{saliency_name}}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Original Image</h3>
+        <p class="content-text">The image uploaded :)</p>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Activation Histogram</h3>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{activation_name}}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Activation Histogram peek at {{max}}"</h3>
+        <p class="content-text">Peek at the shown max out of 512</p>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Saliency Map</h3>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{saliency_name}}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Saliency Map</h3>
+        <p class="content-text">Representation of the image through the model's eyes</p>
+      </div>
+  </div>
+</div>
+
+</body>
+<footer>
+
+</footer>
+</html>
